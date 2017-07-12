@@ -14,6 +14,8 @@ import scipy.misc
 import numpy as np
 from time import gmtime, strftime
 
+import pdb
+
 pp = pprint.PrettyPrinter()
 
 get_stddev = lambda x, k_h, k_w: 1/math.sqrt(k_w*k_h*x.get_shape()[-1])
@@ -196,3 +198,14 @@ def visualize(sess, dcgan, config, option):
     new_image_set = [merge(np.array([images[idx] for images in image_set]), [10, 10]) \
         for idx in range(64) + range(63, -1, -1)]
     make_gif(new_image_set, './samples/test_gif_merged.gif', duration=8)
+
+
+########## Elliott ##########
+def get_text_batch(image_path, text_data):
+    try:
+        #pdb.set_trace()
+        idx = int(image_path[0:6])-1
+    except:
+        print("image_path format is unexpected.")
+    else:
+        return text_data[idx]
