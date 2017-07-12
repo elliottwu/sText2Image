@@ -1,0 +1,1 @@
+python train-dcgan.py --dataset /disk1/yongyi/gan/v4-dcgan-completion.tensorflow-face-style2/data/CelebA/xdog_all --batch_size 64 --checkpoint_dir checkpoints_face --sample_dir samples_face --epoch 50 --learning_rate 0.0002 --text_path datasets/celeba/imAttrs.pkl --text_vector_dim 18
