@@ -209,3 +209,6 @@ def get_text_batch(image_path, text_data):
         print("image_path format is unexpected.")
     else:
         return text_data[idx]
+
+def rgb2gray(rgb):
+    return np.dot(rgb[...,:3], [0.2989, 0.5870, 0.1140])
