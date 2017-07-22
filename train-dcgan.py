@@ -26,7 +26,10 @@ flags.DEFINE_integer("text_vector_dim", 100, "The dimension of input text vector
 flags.DEFINE_string("dataset", "lfw-aligned-64", "Dataset directory.")
 flags.DEFINE_string("checkpoint_dir", "checkpoint", "Directory name to save the checkpoints [checkpoint]")
 flags.DEFINE_string("sample_dir", "samples", "Directory name to save the image samples [samples]")
+flags.DEFINE_string("log_dir", "logs", "Directory name to save the logs [logs]")
 flags.DEFINE_string("text_path", "text_embeddings.pkl", "Path of the text embeddings [text_embeddings.dmp]")
+flags.DEFINE_float("lam", 0.1, "Hyperparameter for contextual loss [0.1]")
+flags.DEFINE_float("lam2", 0.1, "Hyperparameter for wrong examples [0.1]")
 FLAGS = flags.FLAGS
 
 if not os.path.exists(FLAGS.checkpoint_dir):
@@ -38,6 +41,6 @@ config = tf.ConfigProto()
 config.gpu_options.allow_growth = True
 with tf.Session(config=config) as sess:
     dcgan = DCGAN(sess, image_size=FLAGS.image_size, batch_size=FLAGS.batch_size, text_vector_dim=FLAGS.text_vector_dim,
-                  is_crop=False, checkpoint_dir=FLAGS.checkpoint_dir, sample_dir=FLAGS.sample_dir)
+                  is_crop=False, checkpoint_dir=FLAGS.checkpoint_dir, sample_dir=FLAGS.sample_dir, log_dir=FLAGS.log_dir, lam=FLAGS.lam, lam2=FLAGS.lam2)
 
     dcgan.train(FLAGS)
