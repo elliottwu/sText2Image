@@ -4,7 +4,7 @@
 <img src="./imgs/problem.png" width="600">
 
 ## Introduction
-Our goal is to generate photo-realistic images from given texts and freehand sketches, where texts provide the contents and sketches control the shape. Freehand sketch can be highly abstract (examples shown below), and learning representations of sketches is not trivial. In contrast to other cross domain learning approaches, like [pix2pix](https://phillipi.github.io/pix2pix/) and [CycleGAN](https://junyanz.github.io/CycleGAN/), where a mapping from representations in one domain to those in another domain is learned, we propose to learn a joint representation of text, sketch and image. 
+Our goal is to generate photo-realistic images from given texts and freehand sketches, where texts provide the contents and sketches control the shapes. Freehand sketch can be highly abstract (examples shown below), and learning representations of sketches is not trivial. In contrast to other cross domain learning approaches, like [pix2pix](https://phillipi.github.io/pix2pix/) and [CycleGAN](https://junyanz.github.io/CycleGAN/), where a mapping from representations in one domain to those in another domain is learned, we propose to learn a joint representation of text, sketch and image. 
 
 face                        |bird                        |shoe                        
 :--------------------------:|:--------------------------:|:--------------------------:
@@ -33,7 +33,7 @@ git clone https://github.com/elliottwu/sText2Image.git
 cd sText2Image
 ```
 
-- Download preprocessed CelebA data: 
+- Download preprocessed CelebA data (~3GB): 
 ```bash
 sh ./datasets/download_dataset.sh
 ```
@@ -53,7 +53,7 @@ sh test.sh
 ```
 
 ### Pretrained Model
-- Download pretrained model:
+- Download pretrained model: 
 ```bash
 sh download_pretrained_model.sh
 ```
