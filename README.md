@@ -1,10 +1,9 @@
 (in progress, will make it public later)
 
-# sText2Image (in progress)
-<img src="./imgs/problem.png" width="600">
-Sketch-Guided Text-to-Image Generation (part of the project was developed in [MLJejuCamp2017](http://mlcampjeju.com/))
-
+# Sketch-Guided Text-to-Image Generation (in progress)
 ## Introduction
+<img src="./imgs/problem.png" width="600">
+
 Our goal is to generate photo-realistic images from given texts and freehand sketches, where texts provide the contents and sketches control the shape. Freehand sketch can be highly abstract (examples<sup id="a1">[1](#f1)</sup> shown below), and learning representations of sketches is not trivial. In contrast to other cross domain learning approaches, like [pix2pix](https://phillipi.github.io/pix2pix/) and [CycleGAN](https://junyanz.github.io/CycleGAN/), where a mapping from representations in one domain to those in another domain is learned, we propose to learn a joint representation of text, sketch and image. 
 
 face                        |bird                        |shoe                        
@@ -18,8 +17,8 @@ face                        |bird                        |shoe
 - Supervisor: Yu-wing Tai (Tencent), [Chi-Keung Tang](http://www.cs.ust.hk/~cktang/) (HKUST)
 - Mentor in MLJejuCamp2017: Hyungjoo Cho
 
-### MLJejuCamp2017
-More interesting projects can be found in Machine Learning Camp Jeju 2017 [project descriptions](https://github.com/TensorFlowKR/MLJejuCamp) and [program github](https://github.com/MLJejuCamp2017). 
+### [MLJejuCamp2017](http://mlcampjeju.com/)
+Part of the project was developed in Machine Learning Camp Jeju 2017. More interesting projects can be found in [project descriptions](https://github.com/TensorFlowKR/MLJejuCamp) and [program github](https://github.com/MLJejuCamp2017). 
 
 ## Get Started
 ### Prerequisites
