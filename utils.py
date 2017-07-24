@@ -1,6 +1,8 @@
 # Original Version: Taehoon Kim (http://carpedm20.github.io)
 #   + Source: https://github.com/carpedm20/DCGAN-tensorflow/blob/e30539fb5e20d5a0fed40935853da97e9e55eee8/utils.py
 #   + License: MIT
+# [2017-07] Modifications for sText2Image: Shangzhe Wu
+#   + License: MIT
 
 """
 Some codes from https://github.com/Newmu/dcgan_code

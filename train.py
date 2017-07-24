@@ -9,11 +9,9 @@
 import os
 import scipy.misc
 import numpy as np
-
-from model import DCGAN
-from utils import pp, visualize, to_json
-
 import tensorflow as tf
+
+from model import GAN
 
 flags = tf.app.flags
 flags.DEFINE_integer("epoch", 25, "Epoch to train [25]")
@@ -23,13 +21,14 @@ flags.DEFINE_integer("train_size", np.inf, "The size of train images [np.inf]")
 flags.DEFINE_integer("batch_size", 64, "The size of batch images [64]")
 flags.DEFINE_integer("image_size", 64, "The size of image to use [64]")
 flags.DEFINE_integer("text_vector_dim", 100, "The dimension of input text vector [100]")
-flags.DEFINE_string("dataset", "lfw-aligned-64", "Dataset directory.")
+flags.DEFINE_string("dataset", "datasets/celeba/train", "Dataset directory.")
 flags.DEFINE_string("checkpoint_dir", "checkpoint", "Directory name to save the checkpoints [checkpoint]")
 flags.DEFINE_string("sample_dir", "samples", "Directory name to save the image samples [samples]")
 flags.DEFINE_string("log_dir", "logs", "Directory name to save the logs [logs]")
-flags.DEFINE_string("text_path", "text_embeddings.pkl", "Path of the text embeddings [text_embeddings.dmp]")
-flags.DEFINE_float("lam", 0.1, "Hyperparameter for contextual loss [0.1]")
-flags.DEFINE_float("lam2", 0.1, "Hyperparameter for wrong examples [0.1]")
+flags.DEFINE_string("text_path", "text_embeddings.pkl", "Path of the text embeddings [text_embeddings.pkl]")
+#flags.DEFINE_float("lam1", 0.1, "Hyperparameter for contextual loss [0.1]")
+#flags.DEFINE_float("lam2", 0.1, "Hyperparameter for perceptual loss [0.1]")
+flags.DEFINE_float("lam3", 0.1, "Hyperparameter for wrong examples [0.1]")
 FLAGS = flags.FLAGS
 
 if not os.path.exists(FLAGS.checkpoint_dir):
@@ -40,7 +39,7 @@ if not os.path.exists(FLAGS.sample_dir):
 config = tf.ConfigProto()
 config.gpu_options.allow_growth = True
 with tf.Session(config=config) as sess:
-    dcgan = DCGAN(sess, 
+    model = GAN(sess, 
                   image_size=FLAGS.image_size, 
                   batch_size=FLAGS.batch_size, 
                   text_vector_dim=FLAGS.text_vector_dim,
@@ -48,7 +47,7 @@ with tf.Session(config=config) as sess:
                   sample_dir=FLAGS.sample_dir, 
                   log_dir=FLAGS.log_dir, 
                   is_crop=False, 
-                  lam=FLAGS.lam, 
-                  lam2=FLAGS.lam2)
+                  lam3=FLAGS.lam3,
+                 )
 
-    dcgan.train(FLAGS)
+    model.train(FLAGS)
