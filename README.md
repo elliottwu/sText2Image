@@ -17,8 +17,8 @@ face                        |bird                        |shoe
 - Supervisor: Yu-wing Tai (Tencent), [Chi-Keung Tang](http://www.cs.ust.hk/~cktang/) (HKUST)
 - Mentor in MLJejuCamp2017: Hyungjoo Cho
 
-### [MLJejuCamp2017](http://mlcampjeju.com/)
-Part of the project was developed in Machine Learning Camp Jeju 2017. More interesting projects can be found in [project descriptions](https://github.com/TensorFlowKR/MLJejuCamp) and [program github](https://github.com/MLJejuCamp2017). 
+### MLJejuCamp2017
+Part of the project was developed in [Machine Learning Camp Jeju 2017](http://mlcampjeju.com/). More interesting projects can be found in [project descriptions](https://github.com/TensorFlowKR/MLJejuCamp) and [program github](https://github.com/MLJejuCamp2017). 
 
 ## Get Started
 ### Prerequisites
