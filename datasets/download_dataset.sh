@@ -2,7 +2,7 @@
 download_celeba(){
     echo "----------------------- downloading celeba dataset -----------------------"
     wget https://storage.googleapis.com/stext2image/celeba.tar.gz
-    tar xzvf celeba.tar.gz
+    tar xzvf celeba.tar.gz -C ./datasets/
     rm celeba.tar.gz
 }
 
