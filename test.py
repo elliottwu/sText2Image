@@ -18,7 +18,7 @@ parser.add_argument('--batchSize', type=int, default=64)
 parser.add_argument('--text_vector_dim', type=int, default=100)
 parser.add_argument('--lam1', type=float, default=0.1) # Hyperparameter for contextual loss [0.1]
 parser.add_argument('--lam2', type=float, default=0.1) # Hyperparameter for perceptual loss [0.1]
-parser.add_argument('--lam3', type=float, default=0.1) # Hyperparameter for wrong example [0.1]
+#parser.add_argument('--lam3', type=float, default=0.1) # Hyperparameter for wrong example [0.1]
 parser.add_argument('--checkpointDir', type=str, default='checkpoint')
 parser.add_argument('--outDir', type=str, default='results')
 parser.add_argument('--text_path', type=str, default='text_embeddings.pkl')
@@ -42,6 +42,5 @@ with tf.Session(config=config) as sess:
                 checkpoint_dir=args.checkpointDir, 
                 lam1=args.lam1, 
                 lam2=args.lam2,
-                lam3=args.lam3,
                )
     model.test(args)
