@@ -4,13 +4,13 @@
 <img src="./imgs/problem.png" width="600">
 
 ## Introduction
-Our goal is to generate photo-realistic images from given texts and freehand sketches, where texts provide the contents and sketches control the shape. Freehand sketch can be highly abstract (examples<sup id="a1">[1](#f1)</sup> shown below), and learning representations of sketches is not trivial. In contrast to other cross domain learning approaches, like [pix2pix](https://phillipi.github.io/pix2pix/) and [CycleGAN](https://junyanz.github.io/CycleGAN/), where a mapping from representations in one domain to those in another domain is learned, we propose to learn a joint representation of text, sketch and image. 
+Our goal is to generate photo-realistic images from given texts and freehand sketches, where texts provide the contents and sketches control the shapes. Freehand sketch can be highly abstract (examples shown below), and learning representations of sketches is not trivial. In contrast to other cross domain learning approaches, like [pix2pix](https://phillipi.github.io/pix2pix/) and [CycleGAN](https://junyanz.github.io/CycleGAN/), where a mapping from representations in one domain to those in another domain is learned, we propose to learn a joint representation of text, sketch and image. 
 
 face                        |bird                        |shoe                        
 :--------------------------:|:--------------------------:|:--------------------------:
 ![](imgs/face_handdraw.png) |![](imgs/bird_handdraw.png) |![](imgs/shoe_handdraw.png)
 
-<sub id="f1">* A few freehand sketches were collected from volunteers.[↩](#a1)</sub>
+<sub id="f1">* A few freehand sketches were collected from volunteers.</sub>
 
 #### Contributors: 
 - Major Contributor: Shangzhe Wu (HKUST), Yongyi Lu (HKUST)
@@ -18,7 +18,7 @@ face                        |bird                        |shoe
 - Mentor in MLJejuCamp2017: Hyungjoo Cho
 
 ### MLJejuCamp2017
-Part of the project was developed in [Machine Learning Camp Jeju 2017](http://mlcampjeju.com/). More interesting projects can be found in [project descriptions](https://github.com/TensorFlowKR/MLJejuCamp) and [program github](https://github.com/MLJejuCamp2017). 
+Part of the project was developed in [Machine Learning Camp Jeju 2017](http://mlcampjeju.com/). More interesting projects can be found in [project descriptions](https://github.com/TensorFlowKR/MLJejuCamp) and [program GitHub](https://github.com/MLJejuCamp2017). 
 
 ## Get Started
 ### Prerequisites
@@ -33,7 +33,7 @@ git clone https://github.com/elliottwu/sText2Image.git
 cd sText2Image
 ```
 
-- Download preprocessed CelebA data: 
+- Download preprocessed CelebA data (~3GB): 
 ```bash
 sh ./datasets/download_dataset.sh
 ```
@@ -53,13 +53,12 @@ sh test.sh
 ```
 
 ### Pretrained Model
-- Download pretrained model:
+- Download pretrained model: 
 ```bash
-wget https://storage.googleapis.com/stext2image/face_pretrained.tar.gz
-tar xzvf face_pretrained.tar.gz 
+sh download_pretrained_model.sh
 ```
 
-- Test pretrained model: 
+- Test pretrained model on CelebA dataset: 
 ```bash
 python test.py ./datasets/celeba/test/* --checkpointDir checkpoints_face_pretrained --maskType right --batchSize 64 --lam1 100 --lam2 1 --lam3 0.1 --lr 0.001 --nIter 1000 --outDir results_face_pretrained --text_vector_dim 18 --text_path datasets/celeba/imAttrs.pkl
 ```
