@@ -55,11 +55,10 @@ sh test.sh
 ### Pretrained Model
 - Download pretrained model:
 ```bash
-wget https://storage.googleapis.com/stext2image/face_pretrained.tar.gz
-tar xzvf face_pretrained.tar.gz 
+sh download_pretrained_model.sh
 ```
 
-- Test pretrained model: 
+- Test pretrained model on CelebA dataset: 
 ```bash
 python test.py ./datasets/celeba/test/* --checkpointDir checkpoints_face_pretrained --maskType right --batchSize 64 --lam1 100 --lam2 1 --lam3 0.1 --lr 0.001 --nIter 1000 --outDir results_face_pretrained --text_vector_dim 18 --text_path datasets/celeba/imAttrs.pkl
 ```
