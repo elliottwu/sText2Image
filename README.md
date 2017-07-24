@@ -1,9 +1,9 @@
 (in progress, will make it public later)
 
 # Sketch-Guided Text-to-Image Generation (in progress)
-## Introduction
 <img src="./imgs/problem.png" width="600">
 
+## Introduction
 Our goal is to generate photo-realistic images from given texts and freehand sketches, where texts provide the contents and sketches control the shape. Freehand sketch can be highly abstract (examples<sup id="a1">[1](#f1)</sup> shown below), and learning representations of sketches is not trivial. In contrast to other cross domain learning approaches, like [pix2pix](https://phillipi.github.io/pix2pix/) and [CycleGAN](https://junyanz.github.io/CycleGAN/), where a mapping from representations in one domain to those in another domain is learned, we propose to learn a joint representation of text, sketch and image. 
 
 face                        |bird                        |shoe                        
