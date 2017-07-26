@@ -19,6 +19,8 @@ for n in range(num_imgs):
         im_A = cv2.imread(path_A)
         im_B = cv2.imread(path_B)
         im_C = cv2.imread(path_C)
-        im_ABC = np.concatenate([im_A, im_B, im_C], 1)
+        h, w, c = im_A.shape
+        gap = np.ones((h, 5, c))*255
+        im_ABC = np.concatenate([im_A, gap, im_B, gap, im_C], 1)
         cv2.imwrite(path_ABC, im_ABC)
 
