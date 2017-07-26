@@ -66,10 +66,10 @@ python test.py ./datasets/celeba/test/* --checkpointDir checkpoints_face_pretrai
 ## Experiments
 We test our framework with 3 kinds of data, face([CelebA](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html)), bird([CUB](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html)), and flower([Oxford-102](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/index.html)). So far, we have only experimented with face images using attribute vectors as texts information. Here are some preliminary results (**to be updated**): 
 
-### Face
+### 1. Face
 We used CelebA dataset, which also provides 40 attributes for each image. Similar to the text information, attributes control the specific details of the generated images. We chose 18 attrbutes for training. 
 
-#### Attributes match sketch
+#### a). Attributes match sketch: 
 The following images were generated given sketches and the corresponding attriubtes. 
 
 ##### Mustache
@@ -79,6 +79,23 @@ attributes   |sketch / generated / gt |attributes   | sketch / generated / gt
 <sub id="f1"> Big_Lips, Big_Nose, Chubby, Goatee, High_Cheekbones, Male, Smiling</sub> |<img src="./imgs/examples/mustache/03.png" width="500"> |<sub id="f1"> Male, Mustache</sub> |<img src="./imgs/examples/mustache/04.png" width="500">
 <sub id="f1"> Goatee, Male, Mouth_Open, Smiling</sub> |<img src="./imgs/examples/mustache/05.png" width="500"> |<sub id="f1"> Big_Nose, Goatee, Male, Smiling</sub> |<img src="./imgs/examples/mustache/06.png" width="500">
 <sub id="f1"> 5_o_Clock_Shadow, Big_Lips, Big_Nose, Goatee, High_Cheekbones, Male, Mouth_Open, Rosy_Cheeks, Smiling</sub> |<img src="./imgs/examples/mustache/07.png" width="500"> |<sub id="f1"> 5_o_Clock_Shadow, Big_Nose, Male, Narrow_Eyes</sub> |<img src="./imgs/examples/mustache/08.png" width="500">
+
+##### Eyeglasses
+attributes   |sketch / generated / gt |attributes   | sketch / generated / gt 
+:-----------:|:----------------------:|:-----------:|:-----------------------:
+<sub id="f1"> Big_Nose, Eyeglasses, Goatee, Male</sub> |<img src="./imgs/examples/eyeglasses/01.png" width="500"> |<sub id="f1"> Eyeglasses</sub> |<img src="./imgs/examples/eyeglasses/02.png" width="500">
+<sub id="f1"> Eyeglasses, High_Cheekbones, Male, Mouth_Open, Smiling</sub> |<img src="./imgs/examples/eyeglasses/03.png" width="500"> |<sub id="f1"> 5_o_Clock_Shadow, Big_Nose, Eyeglasses, Male, Mouth_Open, Smiling</sub> |<img src="./imgs/examples/eyeglasses/04.png" width="500">
+<sub id="f1"> Big_Nose, Double_Chin, Eyeglasses, Male, Mouth_Open, Pointy_Nose, Smiling</sub> |<img src="./imgs/examples/eyeglasses/05.png" width="500"> |<sub id="f1"> Eyeglasses, High_Cheekbones, Male, Mouth_Open, Smiling</sub> |<img src="./imgs/examples/eyeglasses/06.png" width="500">
+<sub id="f1"> 5_o_Clock_Shadow, Eyeglasses, Male, Mouth_Open, Smiling</sub> |<img src="./imgs/examples/eyeglasses/07.png" width="500"> |<sub id="f1"> Big_Lips, Big_Nose, Eyeglasses, Goatee, Male, Mouth_Open</sub> |<img src="./imgs/examples/eyeglasses/08.png" width="500">
+
+
+##### Lipstick
+attributes   |sketch / generated / gt |attributes   | sketch / generated / gt 
+:-----------:|:----------------------:|:-----------:|:-----------------------:
+<sub id="f1"> Heavy_Makeup, High_Cheekbones, Mouth_Open, Pointy_Nose, Smiling, Wearing_Lipstick</sub> |<img src="./imgs/examples/lipstick/01.png" width="500"> |<sub id="f1"> Heavy_Makeup, Mouth_Open, Wearing_Lipstick</sub> |<img src="./imgs/examples/lipstick/02.png" width="500">
+<sub id="f1"> Heavy_Makeup, High_Cheekbones, Mouth_Open, Pointy_Nose, Smiling, Wearing_Lipstick</sub> |<img src="./imgs/examples/lipstick/03.png" width="500"> |<sub id="f1"> Heavy_Makeup, Pointy_Nose, Smiling, Wearing_Lipstick</sub> |<img src="./imgs/examples/lipstick/04.png" width="500">
+<sub id="f1"> Heavy_Makeup, High_Cheekbones, Mouth_Open, Pointy_Nose, Smiling, Wearing_Lipstick</sub> |<img src="./imgs/examples/lipstick/05.png" width="500"> |<sub id="f1"> Big_Lips, Big_Nose, Heavy_Makeup, High_Cheekbones, Mouth_Open, Rosy_Cheeks, Smiling, Wearing_Lipstick</sub> |<img src="./imgs/examples/lipstick/06.png" width="500">
+<sub id="f1"> Heavy_Makeup, Pointy_Nose, Wearing_Lipstick</sub> |<img src="./imgs/examples/lipstick/07.png" width="500"> |<sub id="f1"> Heavy_Makeup, Mouth_Open, Smiling, Wearing_Lipstick</sub> |<img src="./imgs/examples/lipstick/08.png" width="500">
 
 ## Acknowledgement
 Codes are based on [DCGAN](https://github.com/carpedm20/DCGAN-tensorflow) and [dcgan-completion](https://github.com/bamos/dcgan-completion.tensorflow). 
