@@ -386,9 +386,9 @@ Initializing a new one.
             if batchSz < self.batch_size:
                 print(batchSz)
                 padSz = ((0, int(self.batch_size-batchSz)), (0,0), (0,0), (0,0))
-                batch_images = np.pad(batch_images, padSz, 'constant')
+                batch_images = np.pad(batch_images, padSz, 'wrap')
                 batch_images = batch_images.astype(np.float32)
-                batch_t = np.pad(batch_t, ((0, int(self.batch_size-batchSz)), (0,0)), 'constant')
+                batch_t = np.pad(batch_t, ((0, int(self.batch_size-batchSz)), (0,0)), 'wrap')
             
             
             nRows = np.ceil(batchSz/8)
@@ -400,7 +400,7 @@ Initializing a new one.
             zhats_init = np.random.uniform(-1, 1, size=(self.batch_size, self.z_dim)).astype(np.float32)
             zhats_ = zhats_init.copy()
             kl_div = np.full(len(zhats_), np.inf)
-            in_flat = [rgb2gray(img[:,:64,:]).flatten() for img in batch_images]
+            in_flat = [rgb2gray(img[:,:self.image_size,:]).flatten() for img in batch_images]
             in_flat = np.array(in_flat) + 1
             kld_avg = 0
             
@@ -411,7 +411,7 @@ Initializing a new one.
                 save_images(G_imgs[0][:batchSz,:,:,:], [nRows, nCols],
                         os.path.join(config.outDir, 'hats_imgs_{:04d}/init_{:02d}.png'.format(idx, i)))
                 
-                out_flat = [rgb2gray(img[:,:64,:]).flatten() for img in G_imgs[0]]
+                out_flat = [rgb2gray(img[:,:self.image_size,:]).flatten() for img in G_imgs[0]]
                 out_flat = np.array(out_flat) + 1
                 
                 # choose lowest kl divergence
