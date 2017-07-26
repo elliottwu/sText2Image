@@ -8,7 +8,7 @@ Our goal is to generate photo-realistic images from given texts and freehand ske
 
 face                        |bird                        |shoe                        
 :--------------------------:|:--------------------------:|:--------------------------:
-![](imgs/face_handdraw.png) |![](imgs/bird_handdraw.png) |![](imgs/shoe_handdraw.png)
+![](imgs/handdraw/face_handdraw.png) |![](imgs/handdraw/bird_handdraw.png) |![](imgs/handdraw/shoe_handdraw.png)
 
 <sub id="f1">* A few freehand sketches were collected from volunteers.</sub>
 
@@ -65,6 +65,20 @@ python test.py ./datasets/celeba/test/* --checkpointDir checkpoints_face_pretrai
 
 ## Experiments
 We test our framework with 3 kinds of data, face([CelebA](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html)), bird([CUB](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html)), and flower([Oxford-102](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/index.html)). So far, we have only experimented with face images using attribute vectors as texts information. Here are some preliminary results (**to be updated**): 
+
+### Face
+We used CelebA dataset, which also provides 40 attributes for each image. Similar to the text information, attributes control the specific details of the generated images. We chose 18 attrbutes for training. 
+
+#### Attributes match sketch
+The following images were generated given sketches and the corresponding attriubtes. 
+
+##### Mustache
+attributes   |sketch / generated / gt |attributes   | sketch / generated / gt 
+:-----------:|:----------------------:|:-----------:|:-----------------------:
+<sub id="f1"> 5_o_Clock_Shadow, Male, Mouth_Open, Pointy_Nose</sub> |<img src="./imgs/examples/mustache/01.png" width="500"> |<sub id="f1"> 5_o_Clock_Shadow, Big_Nose, Male, Mustache</sub> |<img src="./imgs/examples/mustache/02.png" width="500">
+<sub id="f1"> Big_Lips, Big_Nose, Chubby, Goatee, High_Cheekbones, Male, Smiling</sub> |<img src="./imgs/examples/mustache/03.png" width="500"> |<sub id="f1"> Male, Mustache</sub> |<img src="./imgs/examples/mustache/04.png" width="500">
+<sub id="f1"> Goatee, Male, Mouth_Open, Smiling</sub> |<img src="./imgs/examples/mustache/05.png" width="500"> |<sub id="f1"> Big_Nose, Goatee, Male, Smiling</sub> |<img src="./imgs/examples/mustache/06.png" width="500">
+<sub id="f1"> 5_o_Clock_Shadow, Big_Lips, Big_Nose, Goatee, High_Cheekbones, Male, Mouth_Open, Rosy_Cheeks, Smiling</sub> |<img src="./imgs/examples/mustache/07.png" width="500"> |<sub id="f1"> 5_o_Clock_Shadow, Big_Nose, Male, Narrow_Eyes</sub> |<img src="./imgs/examples/mustache/08.png" width="500">
 
 ## Acknowledgement
 Codes are based on [DCGAN](https://github.com/carpedm20/DCGAN-tensorflow) and [dcgan-completion](https://github.com/bamos/dcgan-completion.tensorflow). 
