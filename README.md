@@ -1,5 +1,3 @@
-(in progress, will make it public later)
-
 # Sketch-Guided Text-to-Image Generation (in progress)
 <img src="./imgs/problem.png" width="600">
 
