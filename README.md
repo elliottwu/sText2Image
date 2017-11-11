@@ -11,7 +11,7 @@ face                        |bird                        |shoe
 <sub id="f1">* A few freehand sketches were collected from volunteers.</sub>
 
 #### Contributors: 
-- Major Contributor: Shangzhe Wu (HKUST), Yongyi Lu (HKUST)
+- Major Contributor: Shangzhe Wu(https://elliottwu.github.io/) (HKUST), Yongyi Lu (HKUST)
 - Supervisor: Yu-wing Tai (Tencent), [Chi-Keung Tang](http://www.cs.ust.hk/~cktang/) (HKUST)
 - Mentor in MLJejuCamp2017: Hyungjoo Cho
 
