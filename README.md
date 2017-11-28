@@ -1,8 +1,10 @@
-# Sketch-Guided Text-to-Image Generation (in progress)
+# Sketch-Guided Text-to-Image Generation
 <img src="./imgs/problem.png" width="600">
 
 ## Introduction
-Our goal is to generate photo-realistic images from given texts and freehand sketches, where texts provide the contents and sketches control the shapes. Freehand sketch can be highly abstract (examples shown below), and learning representations of sketches is not trivial. In contrast to other cross domain learning approaches, like [pix2pix](https://phillipi.github.io/pix2pix/) and [CycleGAN](https://junyanz.github.io/CycleGAN/), where a mapping from representations in one domain to those in another domain is learned, we propose to learn a joint representation of text, sketch and image. 
+This is based on one of our prior works on [Sketch-to-Image Generation](https://arxiv.org/abs/1711.08972). Freehand sketch can be highly abstract (examples shown below), and learning representations of sketches is not trivial. In contrast to other cross domain learning approaches, like [pix2pix](https://phillipi.github.io/pix2pix/) and [CycleGAN](https://junyanz.github.io/CycleGAN/), where a mapping from representations in one domain to those in another domain is learned, in [Sketch-to-Image Generation](https://arxiv.org/abs/1711.08972), we propose to learn a joint representation of sketch and image. 
+
+In this project we intend to add text constraints to sketch-to-image generation, where texts provide the contents and sketches control the shapes. **So far, I only tried to add attribute guidance instead of using text embeddings as additional conditions, and this repo demonstrates results on _Attribute-Guided Sketch-to-Image Generation_.**
 
 face                        |bird                        |shoe                        
 :--------------------------:|:--------------------------:|:--------------------------:
@@ -11,12 +13,12 @@ face                        |bird                        |shoe
 <sub id="f1">* A few freehand sketches were collected from volunteers.</sub>
 
 #### Contributors: 
-- Major Contributor: [Shangzhe Wu](https://elliottwu.github.io/) (HKUST), Yongyi Lu (HKUST)
+- Major Contributor: [Shangzhe Wu](https://elliottwu.github.io/) (HKUST)
 - Supervisor: Yu-wing Tai (Tencent), [Chi-Keung Tang](http://www.cs.ust.hk/~cktang/) (HKUST)
 - Mentor in MLJejuCamp2017: Hyungjoo Cho
 
 ### MLJejuCamp2017
-Part of the project was developed in [Machine Learning Camp Jeju 2017](http://mlcampjeju.com/). More interesting projects can be found in [project descriptions](https://github.com/TensorFlowKR/MLJejuCamp) and [program GitHub](https://github.com/MLJejuCamp2017). 
+This project was developed in [Machine Learning Camp Jeju 2017](http://mlcampjeju.com/) within one month. More interesting projects can be found in [project descriptions](https://github.com/TensorFlowKR/MLJejuCamp) and [program GitHub](https://github.com/MLJejuCamp2017). Final presentation can be watched [here](https://www.youtube.com/watch?v=X6ieGv82PYU) (partially). 
 
 ## Get Started
 ### Prerequisites
