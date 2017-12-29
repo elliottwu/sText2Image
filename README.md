@@ -1,4 +1,4 @@
-# Sketch-Guided Text-to-Image Generation
+# Attribute-Guided Sketch-to-Image Generation
 <img src="./imgs/problem.png" width="600">
 
 ## Introduction
