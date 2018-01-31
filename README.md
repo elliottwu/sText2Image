@@ -2,7 +2,7 @@
 <img src="./imgs/problem.png" width="600">
 
 ## Introduction
-This is based on one of our prior works on [Sketch-to-Image Generation](https://arxiv.org/abs/1711.08972). Freehand sketch can be highly abstract (examples shown below), and learning representations of sketches is not trivial. In contrast to other cross domain learning approaches, like [pix2pix](https://phillipi.github.io/pix2pix/) and [CycleGAN](https://junyanz.github.io/CycleGAN/), where a mapping from representations in one domain to those in another domain is learned, in [Sketch-to-Image Generation](https://arxiv.org/abs/1711.08972), we propose to learn a joint representation of sketch and image. 
+This is based on one of our prior works on [Sketch-to-Image Generation](https://arxiv.org/abs/1711.08972). Freehand sketch can be highly abstract (examples shown below), and learning representations of sketches is not trivial. In contrast to other cross domain learning approaches, like [pix2pix](https://phillipi.github.io/pix2pix/) and [CycleGAN](https://junyanz.github.io/CycleGAN/), where a mapping from representations in one domain to those in another domain is learned using translation networks, in [Sketch-to-Image Generation](https://arxiv.org/abs/1711.08972), we propose to learn a joint representation of sketch and image. 
 
 In this project we intend to add text constraints to sketch-to-image generation, where texts provide the contents and sketches control the shapes. **So far, I only tried to add attribute guidance instead of using text embeddings as additional conditions, and this repo demonstrates results on _Attribute-Guided Sketch-to-Image Generation_.**
 
