@@ -2,9 +2,11 @@
 <img src="./imgs/problem.png" width="600">
 
 ## Introduction
+**Note: Implementation in this repo has been largely outdated. You may refer to my [presentation slides](https://goo.gl/S2JjAn) for your own implementation.**
+
 This is based on one of our prior works on [Sketch-to-Image Generation](https://arxiv.org/abs/1711.08972). Freehand sketch can be highly abstract (examples shown below), and learning representations of sketches is not trivial. In contrast to other cross domain learning approaches, like [pix2pix](https://phillipi.github.io/pix2pix/) and [CycleGAN](https://junyanz.github.io/CycleGAN/), where a mapping from representations in one domain to those in another domain is learned using translation networks, in [Sketch-to-Image Generation](https://arxiv.org/abs/1711.08972), we propose to learn a joint representation of sketch and image. 
 
-In this project we intend to add text constraints to sketch-to-image generation, where texts provide the contents and sketches control the shapes. **So far, I only tried to add attribute guidance instead of using text embeddings as additional conditions, and this repo demonstrates results on _Attribute-Guided Sketch-to-Image Generation_.**
+In this project we intend to add text constraints to sketch-to-image generation, where texts provide the contents and sketches control the shapes. **So far, I only tried to add attribute guidance instead of using text embeddings as additional conditions, and this repo demonstrates results on _Attribute-Guided Sketch-to-Image Generation_.** 
 
 face                        |bird                        |shoe                        
 :--------------------------:|:--------------------------:|:--------------------------:
@@ -18,7 +20,7 @@ face                        |bird                        |shoe
 - Mentor in MLJejuCamp2017: Hyungjoo Cho
 
 ### MLJejuCamp2017
-This project was developed in [Machine Learning Camp Jeju 2017](http://mlcampjeju.com/) within one month. More interesting projects can be found in [project descriptions](https://github.com/TensorFlowKR/MLJejuCamp) and [program GitHub](https://github.com/MLJejuCamp2017). Final presentation can be watched [here](https://www.youtube.com/watch?v=X6ieGv82PYU) (partially). 
+This project was developed in [Machine Learning Camp Jeju 2017](http://jeju.dlcamp.org/2017/) within one month. More interesting projects can be found in [final presentations](https://github.com/TensorFlowKR/dlcampjeju/blob/master/2017/github/04_FinalPresentation.md) and [program GitHub](https://github.com/MLJejuCamp2017). Final presentation video can be watched [here](https://www.youtube.com/watch?v=X6ieGv82PYU) (partially). Camp 2018 has been launched, and more details can be found [here](http://jeju.dlcamp.org/2018/).
 
 ## Get Started
 ### Prerequisites
