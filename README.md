@@ -123,3 +123,15 @@ attributes   |sketch / generated      |attributes   | sketch / generated      |a
 
 ## Acknowledgement
 Codes are based on [DCGAN](https://github.com/carpedm20/DCGAN-tensorflow) and [dcgan-completion](https://github.com/bamos/dcgan-completion.tensorflow). 
+
+## Citation
+Consider citing the following paper if you find this repo helpful: 
+```
+@InProceedings{Lu_2018_ECCV,
+  author = {Lu, Yongyi and Wu, Shangzhe and Tai, Yu-Wing and Tang, Chi-Keung},
+  title = {Image Generation from Sketch Constraint Using Contextual GAN},
+  booktitle = {The European Conference on Computer Vision (ECCV)},
+  month = {September},
+  year = {2018}
+}
+```
