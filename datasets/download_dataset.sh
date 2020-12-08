@@ -1,7 +1,7 @@
 # celeba dataset
 download_celeba(){
     echo "----------------------- downloading celeba dataset -----------------------"
-    wget -O celeba.tar.gz "https://unioxfordnexus-my.sharepoint.com/:u:/g/personal/sann6319_ox_ac_uk/ES8bgYAGwXBDnpAA-4q99qgBzXziqP5seSUjdFsMvHcXzg?download=1"
+    wget -O celeba.tar.gz "https://www.robots.ox.ac.uk/~szwu/storage/sketch/celeba.tar.gz"
     tar xzvf celeba.tar.gz -C ./datasets/
     rm celeba.tar.gz
 }
